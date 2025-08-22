@@ -1,0 +1,101 @@
+@use '../utils' as *;
+
+
+.it-custom-accordion {
+    & .accordion-items {
+        border-bottom: 1px solid rgba(49, 53, 55, 1);
+    }
+    & .accordion-buttons {
+        position: relative;
+        text-align: left;
+        padding: 35px 0;
+        padding-right: 90px;
+        width: 100%;
+        color: var(--it-common-white);
+        @media #{$lg}{
+            font-size: 20px;
+        }
+        @media #{$md}{
+            font-size: 16px;
+        }  
+        @media #{$xs}{
+            font-size: 18px;
+            padding-right: 50px;
+        }  
+        @media #{$sm}{
+            padding-right: 45px;
+        } 
+        & span {
+            display: inline-block;
+            margin-right: 5px;
+            & svg {
+                width: 39px;
+                height: 40px;
+                @media #{$xs}{
+                    width: 25px;
+                }
+            }
+        } 
+        & .it-accordion-btn {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            height: 52px;
+            width: 52px;
+            line-height: 52px;
+            text-align: center;
+            transition: .3s;
+            transform: translateY(-50%);
+            color: var(--it-theme-1);
+            background-color: var(--it-common-white);
+            margin-right: 0;
+            @media #{$lg,$md,$xs}{
+                height: 32px;
+                width: 32px;
+                line-height: 32px;
+            }
+            & > i,svg {
+                position: relative;
+                z-index: 1;
+                transition: .3s;   
+                width: 12px;
+                height: 12px;   
+                @media #{$lg,$md,$xs}{
+                    width: 10px;
+                }
+                          
+            }
+        }
+        &:not(.collapsed){
+            padding-bottom: 25px;
+            & .it-accordion-btn {
+                background-color: var(--it-theme-1);
+                & i,svg {
+                    color: var(--it-common-white);
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+    & .accordion-body {
+        padding: 0 30px 20px 0;
+        position: relative;
+        z-index: 1;
+        @media #{$xl,$lg,$xs}{
+            padding-right: 0;
+        }
+        & p {
+            line-height: 1.71;
+            margin-right: 50px;
+            font-size: 16px;
+            @media #{$xl,$lg,$md}{
+                margin-right: 0;
+                font-size: 14px;
+            }
+            @media #{$xs}{
+                margin-right: 0;
+                font-size: 14px;
+            }
+        }
+    }   
+}

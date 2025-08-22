@@ -1,0 +1,153 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  09. cost-calculator css start
+/*----------------------------------------*/
+.it-cost-calculator {
+    &-wrap {
+        padding: 65px 70px;
+        padding-bottom: 75px;
+        @media #{$md}{
+            padding: 45px 40px;
+            padding-bottom: 55px;
+        }
+        @media #{$xs}{
+            padding: 35px 20px;
+            padding-bottom: 45px;
+        }
+        & label {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.33;
+            margin-bottom: 12px;
+            color: var(--it-common-black);
+            @media #{$xs}{
+                font-size: 15px;
+            }
+            @media #{$sm}{
+                font-size: 17px;
+            }
+        }
+        & .postbox__select .nice-select {
+            height: 60px;
+            line-height: 60px;
+            font-weight: 400;
+            font-size: 18px;
+            padding-left: 30px;
+            padding-right: 65px;
+            border: 1px solid #797979;
+            color: var(--it-common-black-2);
+            background-color: transparent;
+            @media #{$xs}{
+                height: 48px;
+                line-height: 48px;
+                font-size: 12px;
+                padding-left: 20px;
+                padding-right: 50px;
+            }
+        }
+        & .postbox__select .nice-select::after {
+            right: 35px;
+            top: 50%;
+            margin-top: 0;
+            border-bottom: 0;
+            transform: rotate(0deg);
+            transform: translateY(-50%);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 7px solid var(--it-common-black-2);
+            @media #{$xs}{
+                right: 20px;
+            }
+        }
+        & .nice-select.open {
+            border: 1px solid var(--it-theme-1);
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+        & .it-shop-widget-checkbox ul li label {
+            font-weight: 400;
+            font-size: 20px;
+            color: var(--it-common-black-2);
+            @media #{$xs}{
+                font-size: 15px;
+            }
+        }
+        & .it-shop-widget-checkbox ul li label::before {
+            width: 20px;
+            height: 20px;
+            line-height: 16px;
+            @media #{$xs}{
+                width: 15px;
+                height: 15px;
+                line-height: 14px;
+            }
+        }
+        & .it-shop-widget-checkbox ul li label::after {
+            width: 20px;
+            height: 20px;
+            @media #{$xs}{
+                width: 15px;
+                height: 15px;
+            }
+        }
+        & .it-shop-widget-checkbox ul li label {
+            padding-left: 30px;
+            margin-bottom: 0;
+        }
+        & .it-shop-widget-checkbox ul li:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    &-btn {
+        & > span {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.33;
+            font-family: var(--it-ff-heading);
+            color: var(--it-common-black-2);
+            @media #{$xs}{
+                font-size: 16px;
+            }
+        }
+    }
+    &-input-box {
+        & input {
+            height: 60px;
+            line-height: 60px;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 0 30px;
+            border: 1px solid #797979;
+            color: var(--it-common-black-2);
+            background-color: transparent;
+            @media #{$xs}{
+                height: 48px;
+                line-height: 48px;
+                font-size: 12px;
+                padding-left: 20px;
+            }
+            &:focus {
+                border: 1px solid var(--it-theme-1);
+            }
+            &::placeholder {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.78;
+                color: var(--it-common-black-2);
+                @media #{$xs}{
+                    font-size: 12px;
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}
+.checkout-form-list {
+    & input[type="checkbox"] {
+        top: 1px;
+        height: 20px;
+        width: 20px;
+    }
+}
