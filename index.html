@@ -229,7 +229,7 @@
                               </i>
                            </a>
                            <div class="it-header-bar d-xl-none">
-                              <button class="it-menu-bar">
+                              <button class="it-menu-bar" aria-labelledby="navigation">
                                  <span>
                                     <svg width="24" height="20" viewBox="0 0 24 20" fill="none"
                                        xmlns="http://www.w3.org/2000/svg">
@@ -263,14 +263,34 @@
                      <div class="swiper-wrapper">
                         <div class="swiper-slide">
                            <div class="it-slider-overlay">
-                              <div class="it-slider-shape-2"><img fetchpriority="high" loading="lazy" src="assets/img/shape/slider-2-1.png" alt="Slider Decorative Shape"></div>
-                              <div class="it-slider-bg" data-background="assets/img/hero/hero-bg-2.jpg"></div>
+                              <div class="it-slider-shape-2">
+                                    <img 
+                                       fetchpriority="high" 
+                                       loading="lazy" 
+                                       src="assets/img/shape/slider-2-1.png" 
+                                       alt="Slider Decorative Shape">
+                                 </div>
+
+                                 <!-- Optimized LCP image -->
+                                 <div class="it-slider-bg">
+                                    <img 
+                                       src="assets/img/hero/hero-bg-1.jpg" 
+                                       alt="Hero background"
+                                       fetchpriority="high"
+                                       decoding="async"
+                                       width="1920" height="1080"
+                                       style="width:100%; height:auto; object-fit:cover;"
+                                    >
+                                 </div>
+                              <!-- <div class="it-slider-shape-2"><img fetchpriority="high" loading="lazy" src="assets/img/shape/slider-2-1.png" alt="Slider Decorative Shape"></div>
+                              <div class="it-slider-bg" data-background="assets/img/hero/hero-bg-1.jpg"></div> -->
                               <div class="container">
                                  <div class="row">
                                     <div class="col-xxl-8 col-xl-7 col-lg-8">
                                        <div class="it-slider-content">
                                           <span class="it-slider-subtitle">6+ Years Experience of Serving</span>
-                                          <h1 class="it-slider-title">Best Cleaning Service in <span style="color:#0499FF">Abu Dhabi</span></h1>
+                                          <h1 class="it-slider-title">Best Car Wash Service in <span style="color:#0499FF">Abu Dhabi</span>
+                                          </h1>
                                           <a href="service.html" class="it-btn-orange">
                                              <span>
                                                 <span class="text-1">View All services</span>
@@ -310,15 +330,31 @@
                         </div>
                         <div class="swiper-slide">
                            <div class="it-slider-overlay">
-                              <div class="it-slider-shape-2"><img fetchpriority="high" loading="lazy" src="assets/img/shape/slider-2-1.png" alt="Slider Decorative Shape"></div>
-                              <div class="it-slider-bg" data-background="assets/img/hero/hero-bg-1.jpg"></div>
+                                <div class="it-slider-shape-2">
+                                    <img 
+                                       fetchpriority="high" 
+                                       loading="lazy" 
+                                       src="assets/img/shape/slider-2-1.png" 
+                                       alt="Slider Decorative Shape">
+                                 </div>
+
+                                 <!-- Optimized LCP image -->
+                                 <div class="it-slider-bg">
+                                    <img 
+                                       src="assets/img/hero/hero-bg-2.jpg" 
+                                       alt="Hero background"
+                                       fetchpriority="high"
+                                       decoding="async"
+                                       width="1920" height="1080"
+                                       style="width:100%; height:auto; object-fit:cover;"
+                                    >
+                                 </div>
                               <div class="container">
                                  <div class="row">
                                     <div class="col-xxl-8 col-xl-7 col-lg-8">
                                        <div class="it-slider-content">
                                           <span class="it-slider-subtitle">6+ Years Experience of Serving</span>
-                                          <h1 class="it-slider-title">Best Car Wash Service in <span style="color:#0499FF">Abu Dhabi</span>
-                                          </h1>
+                                          <h1 class="it-slider-title">Best Cleaning Service in <span style="color:#0499FF">Abu Dhabi</span></h1>
                                           <a href="service.html" class="it-btn-orange">
                                              <span>
                                                 <span class="text-1">View All services</span>
@@ -434,7 +470,7 @@
 
             <!-- about-area-start -->
             <div class="it-about-area it-about-style-2 it-about-style-3 p-relative pt-130 pb-130">
-               <img class="it-about-shape-1 d-none d-lg-block" src="assets/img/shape/about-5-1.png" alt="Sahara Shine Team at Work - Car Cleaning in Abu Dhabi">
+               <img fetchpriority="high" loading="lazy" class="it-about-shape-1 d-none d-lg-block" src="assets/img/shape/about-5-1.png" alt="Sahara Shine Team at Work - Car Cleaning in Abu Dhabi">
                <div class="container">
                   <div class="row align-items-center">
                      <div class="col-xl-7 col-lg-7">
@@ -519,7 +555,7 @@
 
             <!-- service-area-start -->
             <div class="it-service-area p-relative z-index-1 gray-bg pt-125 pb-130">
-               <img class="it-service-shape-1" src="assets/img/shape/service-1-1.png" alt="Sahara Shine Team at Work - Car Cleaning in Abu Dhabi">
+               <img fetchpriority="high" loading="lazy" class="it-service-shape-1" src="assets/img/shape/service-1-1.png" alt="Sahara Shine Team at Work - Car Cleaning in Abu Dhabi">
                <div class="container">
                   <div class="it-service-top-wrap pb-65">
                      <div class="row align-items-end">
@@ -562,7 +598,7 @@
                            data-wow-duration="1.5s" data-wow-delay="0.1">
                            <div class="it-service-thumb it-img-anim" data-displacement="assets/img/webgl/pattern-1.jpg"
                               data-intensity="0.6" data-speedin="1" data-speedout="1">
-                              <img class="w-100" src="assets/img/service/service-1.jpg" alt="Mobile Car Wash Service in Abu Dhabi">
+                              <img fetchpriority="high" loading="lazy" class="w-100" src="assets/img/service/service-1.jpg" alt="Mobile Car Wash Service in Abu Dhabi">
                            </div>
                         </div>
                      </div>
@@ -795,7 +831,7 @@
 
             <!-- testimonial-area-start -->
             <div class="it-testimonial-2-area z-index-1 black-bg pt-130 pb-130">
-               <img class="it-service-shape-1" src="assets/img/shape/testimonial-3-1.png" alt="Happy Sahara Shine Customer - Testimonial">
+               <img fetchpriority="high" loading="lazy" class="it-service-shape-1" src="assets/img/shape/testimonial-3-1.png" alt="Happy Sahara Shine Customer - Testimonial">
                <div class="container">
                   <div class="row align-items-end">
                      <div class="col-xl-4 col-lg-5 order-1 order-lg-0">
