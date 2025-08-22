@@ -1,0 +1,128 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  04. brand css start
+/*----------------------------------------*/
+.it-brand {
+    &-ptb {
+        padding-top: 55px;
+        padding-bottom: 130px;
+        border-top: 1px solid rgba($color: #091216, $alpha: .1);
+        @media #{$md,$xs}{
+            padding: 80px 0;
+        }
+    }
+    &-text {
+        margin-right: 20px;
+        border-right: 1px solid rgba($color: #091216, $alpha: .1);
+        @media #{$lg,$md}{
+            margin-right: 0;
+        }
+        @media #{$xs}{
+            border-right: none;
+            margin-bottom: 50px;
+        }
+        & span {
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 1.28;
+            color: var(--it-common-black);
+            font-family: var(--it-ff-poppins);
+            @media #{$lg,$md}{
+                font-size: 22px;
+            }
+            @media #{$xs}{
+                font-size: 19px;
+            }
+            & b {
+                font-weight: 600;
+                color: var(--it-theme-1);
+            }
+        }
+    }
+    &-item {
+        transition: .3s;
+        filter: grayscale(100%);
+        opacity: .5;
+        &:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+    }
+    &-active {
+        margin-left: 40px;
+        @media #{$xs}{
+            margin-left: 0;
+        }
+        & .slider-transtion {
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+        }
+        & .swiper-slide{
+            width: auto;
+        }
+    }
+    &-style-2 {
+        & .it-brand-text {
+            margin-right: 0;
+            border-right: none;
+        }
+        & .it-brand-active {
+            margin-left: 0;
+        }
+        & .it-brand-ptb {
+            padding-top: 65px;
+            padding-bottom: 125px;
+            border-top: none;
+            border-bottom: 1px solid rgba($color: #091216, $alpha: .1);
+            @media #{$lg,$md}{
+                padding-bottom: 90px;
+            }
+            @media #{$xs}{
+                padding-top: 35px;
+                padding-bottom: 65px;
+            }
+        }
+        & .it-project-shape-1 {
+            opacity: .8;
+        }
+    }
+}
+.it-brand-2 {
+    &-left {
+        @media #{$md,$xs}{
+            margin-bottom: 50px;
+        }
+        & p {
+            line-height: 2;
+            color: var(--it-common-white);
+            @media #{$lg}{
+                font-size: 15px;
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$md,$xs}{
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-right {
+        & .it-brand-item {
+            text-align: center;
+            padding: 21px 30px;
+            margin: 0px -1px -1px 0px;
+            border: 1px solid #313537;
+            & img {
+                height: 86px;
+            }
+            &:hover {
+                & img {
+                    transform: scale(1.1);              
+                }
+            }
+        }
+    }
+}

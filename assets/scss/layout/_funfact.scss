@@ -1,0 +1,75 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  15. funfact css start
+/*----------------------------------------*/
+.it-funfact {
+    &-text {
+        & p {
+            margin-left: 28px;
+            margin-bottom: 0;
+            line-height: 2;
+            color: var(--it-common-black-2);
+            @media #{$md,$xs}{
+                margin-left: 0;
+                margin-top: 25px;
+                font-size: 14px;
+            }
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 80px;
+        margin-bottom: 2px;
+        font-family: var(--it-ff-heading);
+        @media #{$xl,$lg,$md}{
+            font-size: 65px;
+        }
+        @media #{$xs}{
+            font-size: 58px;
+        }
+        & i {
+            font-style: normal;
+        }
+    }
+    &-item {
+        @media #{$md,$xs}{
+           text-align: center;
+        }
+        & span {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 1.28;
+            font-family: var(--it-ff-poppins);
+            @media #{$xl,$lg,$md,$xs}{
+                font-size: 18px;
+            }
+        }
+    }
+    &-wrap {
+        padding-top: 60px;
+        padding-bottom: 90px;
+        border-top: 1px solid rgba($color: #091216, $alpha: .1);
+    }
+    &-col {
+        &-2 {
+            padding-left: 40px;
+            @media #{$md,$xs}{
+               padding-left: 0;
+            }
+        }
+        &-3 {
+            padding-left: 65px;
+            @media #{$md,$xs}{
+                padding-left: 0;
+            }
+        }
+    }
+    &-shape-1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        opacity: .3;
+    }
+}

@@ -1,0 +1,270 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  12. faq css start
+/*--------------------------------------- -*/
+
+.it-faq {
+    &-area {
+        & .it-custom-accordion .accordion-buttons {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--it-common-black);
+            font-family: var(--it-ff-heading);
+
+            @media #{$lg,$md} {
+                font-size: 20px;
+                padding: 22px 0;
+                padding-right: 90px;
+            }
+
+            @media #{$xs} {
+                font-size: 17px;
+                padding: 22px 0;
+                padding-right: 45px;
+            }
+
+            &:not(.collapsed) {
+                & .it-accordion-btn {
+                    background-color: var(--it-theme-1);
+
+                    & i,
+                    svg {
+                        color: var(--it-common-white);
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+
+        & .it-custom-accordion .accordion-items {
+            border-bottom: 1px solid#797979;
+        }
+
+        & .it-custom-accordion .accordion-buttons .it-accordion-btn {
+            height: 32px;
+            width: 32px;
+            line-height: 28px;
+            background-color: var(--it-common-black);
+
+            & svg,
+            i {
+                color: var(--it-common-white);
+            }
+        }
+
+        & .it-custom-accordion .accordion-body p {
+            margin-right: 20px;
+
+            @media #{$lg,$md} {
+                margin-right: 0;
+                font-size: 15px;
+            }
+            @media #{$xs} {
+                margin-right: 0;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &-left {
+        margin-right: -30px;
+
+        @media #{$xl,$lg,$md,$xs} {
+            margin-right: 0;
+        }
+    }
+
+    &-shape-1 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    &-thumb {
+        mask-image: url(../img/faq/mask-img.svg);
+        -webkit-mask-image: url(../img/faq/mask-img.svg);
+        width: 100%;
+        mask-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;
+        height: 544px;
+
+        @media #{$md,$xs} {
+            mask-image: unset;
+        }
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-right {
+        margin-left: 75px;
+
+        @media #{$xl} {
+            margin-left: 20px;
+        }
+
+        @media #{$lg} {
+            margin-left: 30px;
+        }
+
+        @media #{$md,$xs} {
+            margin-left: 0;
+            margin-top: 70px;
+        }
+    }
+
+    &-contact {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        padding: 14px 75px;
+        display: inline-block;
+        background-color: var(--it-theme-1);
+        clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%);
+
+        @media #{$xl,$lg} {
+            padding: 10px 70px;
+        }
+        @media #{$md} {
+            left: 40px;
+            padding: 10px 70px;
+        }
+        @media #{$xs} {
+            left: 20px;
+            padding: 10px 30px;
+        }
+        @media #{$sm} {
+            left: 40px;
+            padding: 10px 70px;
+        }
+
+        & span {
+            display: inline-block;
+            height: 53px;
+            width: 53px;
+            line-height: 53px;
+            text-align: center;
+            margin-right: 15px;
+            border-radius: 50%;
+            background-color: var(--it-common-white);
+
+            @media #{$xl,$lg,$md,$xs} {
+                height: 43px;
+                width: 43px;
+                line-height: 43px;
+            }
+
+            & svg,
+            i {
+                color: var(--it-theme-1);
+            }
+        }
+
+        & a {
+            font-weight: 600;
+            font-size: 25px;
+            font-family: var(--it-ff-poppins);
+            color: var(--it-common-white);
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &-style-2 {
+        & .it-faq-left {
+            margin-right: 83px;
+
+            @media #{$xl} {
+                margin-right: 30px;
+            }
+
+            @media #{$lg} {
+                margin-right: 0;
+            }
+
+            @media #{$md,$xs} {
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+        }
+
+        & .it-contact-form-box {
+            padding: 40px 40px;
+            padding-top: 30px;
+            background-color: var(--it-theme-1);
+            @media #{$md,$xs} {
+                margin-top: 70px;
+            }
+        }
+
+        & .it-contact-form-box p {
+            color: var(--it-common-white);
+        }
+
+        & .it-contact-input-box input {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 22px;
+            background-color: var(--it-common-white);
+            border-bottom: transparent;
+            color: var(--it-common-black);
+        }
+
+        & .postbox__select .nice-select {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 25px;
+            background-color: var(--it-common-white);
+            border-bottom: transparent;
+            color: #797979;
+        }
+
+        & .nice-select::after {
+            right: 25px;
+        }
+
+        & .it-contact-input-box textarea {
+            padding: 15px 25px 30px 25px;
+            height: 150px;
+            background-color: var(--it-common-white);
+            border-bottom: transparent;
+            color: #797979;
+        }
+    }
+}
+
+.it-faq-style-2 {
+    & .it-faq-left {
+        margin: 0 50px;
+
+        @media #{$lg,$md,$xs} {
+            margin: 0;
+        }
+    }
+
+    &.it-faq-area .it-custom-accordion .accordion-body p {
+        margin-right: 0;
+        @media #{$md} {
+            margin-right: 40px;
+        }
+
+        @media #{$xs} {
+            margin: 0;
+        }
+    }
+
+    & .it-custom-accordion .accordion-buttons {
+        @media #{$lg} {
+            padding: 30px 0;
+            padding-right: 90px;
+        }
+    }
+}

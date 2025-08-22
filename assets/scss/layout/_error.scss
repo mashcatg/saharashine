@@ -1,0 +1,70 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  11. error css start
+/*----------------------------------------*/
+.it-error {
+    &-thumb {
+        @media #{$lg} {
+            margin-bottom: 90px;
+        }
+
+        @media #{$md,$xs} {
+            margin-bottom: 50px;
+        }
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    &-area {
+        & .it-newsletter-input-box input {
+            line-height: 60px;
+            height: 60px;
+            padding-left: 30px;
+            padding-right: 80px;
+            background: #F3F3F3;
+            border: 1px xoslid transparent;
+            color: var(--it-common-black);            
+            &::placeholder {
+                color: #797979;
+            }
+            &:focus {
+                border-color: var(--it-theme-1);
+            }
+        }
+        
+        & .it-newsletter-input-box button {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            width: auto;
+            height: auto;
+            padding: 0;
+            background-color: transparent;
+            & svg {
+                @media #{$xl,$lg,$md,$xs}{
+                    width: 20px;
+                } 
+            }
+        }
+        
+        & .it-newsletter-input-box {
+            max-width: 620px;
+            text-align: center;
+            margin: 0 auto;
+            @media #{$lg}{
+                max-width: 550px;
+            }
+            @media #{$md}{
+                max-width: 450px;
+            }
+            @media #{$xs}{
+                width: 90%;
+            }
+        }
+    }
+}
