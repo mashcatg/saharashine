@@ -5057,12 +5057,13 @@ body .ui-tooltip {
 .it-footer-col-2 {
   margin-left: 160px;
 }
-.it-header-menu {
-  margin-left: 50px;
+@media (max-width: 1440px) and (min-width: 426px) {
+  .it-header-menu,
+  .it-header-top-list-box {
+    margin-left: 25px;
+  }
 }
-.it-header-top-list-box{
-  margin-left: 50px;
-}
+
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .it-footer-col-2 {
     margin-left: 80px;
