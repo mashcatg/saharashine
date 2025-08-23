@@ -2,7 +2,8 @@
   "version": 2,
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/(.*)\\.html", "destination": "/$1" }
+    { "source": "/(.*)\\.html", "destination": "/$1" },
+    { "source": "/(.*)", "destination": "/" }
   ],
   "builds": [
     { "src": "*.html", "use": "@vercel/static" },
