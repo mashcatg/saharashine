@@ -2,12 +2,11 @@
   "version": 2,
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/(.*)\\.html", "destination": "/$1" },
-    { "source": "/api/mail", "destination": "/assets/mail.php" }
+    { "source": "/(.*)\\.html", "destination": "/$1" }
   ],
   "builds": [
     { "src": "*.html", "use": "@vercel/static" },
-    { "src": "assets/mail.php", "use": "@vercel/php" },
+    { "src": "api/*.js", "use": "@vercel/node" },
     { "src": "assets/**/*", "use": "@vercel/static" }
   ]
 }

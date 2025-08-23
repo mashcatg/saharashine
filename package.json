@@ -1,0 +1,9 @@
+{
+  "name": "sahara-shine",
+  "version": "1.0.0",
+  "description": "Sahara Shine Website",
+  "main": "index.js",
+  "dependencies": {
+    "nodemailer": "^6.9.4"
+  }
+}
